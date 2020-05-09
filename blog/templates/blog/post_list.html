@@ -7,12 +7,13 @@
       <h1><a href="/">神の徒然なる筆</a></h1>
     </div>
 
-    <div>
-      <p>published: 09.05.2020, 12:14</p>
-      <h2><a href="/">我人生における一歩</a><h2>
-      <p>こんちくわ。ちくわ食いたいっぴ！</p>
-    </div>
-
+    {% for post in posts %}
+      <div>
+        <p>published: {{post.published_date}}</p>
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>{{post.text|linebreaksbr}}</p>
+      </div>
+    {% endfor %}
     <div>
       <p>公開日: today</p>
       <h2><a href="/">我人生における二歩</a><h2>
